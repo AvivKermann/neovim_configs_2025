@@ -2,6 +2,7 @@
 vim.keymap.set("n", "<leader>gs", ":vertical Git<CR>:vertical resize 40<CR>", {noremap = true, silent = true});
 -- open up git difference
 vim.keymap.set("n", "<leader>gd", vim.cmd.Gdiff, {noremap = true, silent = true});
+vim.keymap.set("n", "<leader>gps", ":Git push <CR>", {noremap = true, silent = true});
 -- opens a commit window
 vim.keymap.set("n", "<leader>gc", function()
     vim.cmd("vertical Git commit")
