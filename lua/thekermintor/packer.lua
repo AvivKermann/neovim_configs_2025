@@ -22,10 +22,23 @@ return require('packer').startup(function(use)
             vim.cmd('colorscheme rose-pine-dawn')
         end
     })
-    use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
+    use('nvim-treesitter/nvim-treesitter')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
     use('xiyaowong/transparent.nvim')
+    use('github/copilot.vim')
+    use {'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+    }
+
+    use {'lewis6991/gitsigns.nvim',
+    config = function()
+        require('gitsigns').setup()
+    end
+    }
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         requires = {

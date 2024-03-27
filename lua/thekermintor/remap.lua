@@ -27,3 +27,13 @@ vim.api.nvim_set_keymap("n", "<leader>wsl", "<C-w>h", {noremap = true})
 
 -- clear search params
 vim.api.nvim_set_keymap("n", "<leader>cs", ":noh<CR>", {noremap=true, silent=true})
+
+-- remap copilot accept to the control c key
+vim.api.nvim_set_keymap("i", "<C-c>", 'copilot#Accept("\\<CR>")', {expr = true,replace_keycodes = false })
+
+
+
+
+
+
+

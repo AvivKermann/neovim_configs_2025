@@ -24,3 +24,6 @@ vim.opt.cursorline=true
 
 vim.o.ignorecase = true
 vim.o.smartcase = true
+
+-- Copilot no tab map
+vim.g.copilot_no_tab_map = true
