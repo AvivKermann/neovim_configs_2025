@@ -10,6 +10,12 @@ lsp_zero.on_attach(function(client, bufnr)
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
     vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
+    local test = vim.api.nvim_get_current_buf()
+    local filetype = vim.api.nvim_buf_get_option(test, 'filetype')
+    if filetype == "java" then
+        print("is true? ", filetype=="java")
+        vim.api.nvim_command("Copilot disable")
+    end
 end)
 
 -- if ever in need to add / change lsp to to this link : https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md get the lsp name and add to ensure ensure_installed
