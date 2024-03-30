@@ -13,7 +13,6 @@ lsp_zero.on_attach(function(client, bufnr)
     local test = vim.api.nvim_get_current_buf()
     local filetype = vim.api.nvim_buf_get_option(test, 'filetype')
     if filetype == "java" then
-        print("is true? ", filetype=="java")
         vim.api.nvim_command("Copilot disable")
     end
 end)
