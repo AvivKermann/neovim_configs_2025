@@ -22,21 +22,26 @@ return require('packer').startup(function(use)
             vim.cmd('colorscheme rose-pine-dawn')
         end
     })
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+
     use('nvim-treesitter/nvim-treesitter')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
     use('xiyaowong/transparent.nvim')
     use('github/copilot.vim')
-    use {'numToStr/Comment.nvim',
-    config = function()
-        require('Comment').setup()
-    end
+    use { 'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
     }
 
-    use {'lewis6991/gitsigns.nvim',
-    config = function()
-        require('gitsigns').setup()
-    end
+    use { 'lewis6991/gitsigns.nvim',
+        config = function()
+            require('gitsigns').setup()
+        end
     }
 
     use {

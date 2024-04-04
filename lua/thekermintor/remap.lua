@@ -15,15 +15,18 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- window split verticlly  remap
-vim.api.nvim_set_keymap("n", "<leader>wr", "<C-w>v<C-w>l", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>|", "<C-w>v<C-w>l", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>-", "<C-w>s<C-w>j", {noremap = true})
 
 -- closes the windows
 vim.api.nvim_set_keymap("n", "<leader>cr", "<C-w>l<C-w>c", {noremap=true})
 vim.api.nvim_set_keymap("n", "<leader>cl", "<C-w>h<C-w>c", {noremap=true})
 
 -- switch between windows
-vim.api.nvim_set_keymap("n", "<leader>wsr", "<C-w>l", {noremap = true})
-vim.api.nvim_set_keymap("n", "<leader>wsl", "<C-w>h", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>wl", "<C-w>l", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>wh", "<C-w>h", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>wj", "<C-w>j", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>wk", "<C-w>k", {noremap = true})
 
 -- clear search params
 vim.api.nvim_set_keymap("n", "<leader>cs", ":noh<CR>", {noremap=true, silent=true})
