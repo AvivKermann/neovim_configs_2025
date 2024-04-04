@@ -28,7 +28,7 @@ vim.keymap.set("n", "<leader>ga", function()
     end
 end, {noremap = true, silent = true});
 
-vim.keymap.set("n", "<leader>gps", ":Git push <CR>", {noremap = true, silent = true});
+vim.keymap.set("n", "<leader>gps", ":Git push <CR>:qa<CR>", {noremap = true, silent = true});
 
 -- this is the default keybinding for fugitive ( i will certinly forget them):
 -- "-" : stage/unstage  a file inside git status
