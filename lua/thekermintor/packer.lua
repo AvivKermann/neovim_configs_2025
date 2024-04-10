@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
     use{'ThePrimeagen/harpoon',
         branch = "harpoon2",
     }
+    use('cohama/lexima.vim')
     use('nvim-treesitter/nvim-treesitter')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')

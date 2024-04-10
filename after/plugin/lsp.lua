@@ -6,6 +6,7 @@ lsp_zero.on_attach(function(client, bufnr)
     -- rename entire definition super importent
     vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
     -- shows all references of instance
+    vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
     vim.keymap.set("n", "<leader>ar", function() vim.lsp.buf.references() end, opts)
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
     vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)

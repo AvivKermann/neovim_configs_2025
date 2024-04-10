@@ -23,10 +23,10 @@ vim.api.nvim_set_keymap("n", "<leader>cr", "<C-w>l<C-w>c", {noremap=true})
 vim.api.nvim_set_keymap("n", "<leader>cl", "<C-w>h<C-w>c", {noremap=true})
 
 -- switch between windows
-vim.api.nvim_set_keymap("n", "<leader>wl", "<C-w>l", {noremap = true})
-vim.api.nvim_set_keymap("n", "<leader>wh", "<C-w>h", {noremap = true})
-vim.api.nvim_set_keymap("n", "<leader>wj", "<C-w>j", {noremap = true})
-vim.api.nvim_set_keymap("n", "<leader>wk", "<C-w>k", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>L", "<C-w>l", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>H", "<C-w>h", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>J", "<C-w>j", {noremap = true})
+vim.api.nvim_set_keymap("n", "<leader>K", "<C-w>k", {noremap = true})
 
 -- clear search params
 vim.api.nvim_set_keymap("n", "<leader>cs", ":noh<CR>", {noremap=true, silent=true})
