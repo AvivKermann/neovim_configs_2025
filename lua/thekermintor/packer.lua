@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
         'rose-pine/neovim',
         as = 'rose-pine',
         config = function()
-            vim.cmd('colorscheme rose-pine-dawn')
+            vim.cmd('colorscheme rose-pine')
         end
     })
     use {
@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
     use{'ThePrimeagen/harpoon',
         branch = "harpoon2",
     }
+    use('christoomey/vim-tmux-navigator')
     use('cohama/lexima.vim')
     use('nvim-treesitter/nvim-treesitter')
     use('mbbill/undotree')

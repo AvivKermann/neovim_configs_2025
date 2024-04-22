@@ -1,12 +1,21 @@
 -- personal remaps
 
+
 vim.g.mapleader = " "
+
+-- keeps the visual selection when indenting multi-line
+vim.api.nvim_set_keymap("v",">",">gv",{noremap = true, silent = true})
+vim.api.nvim_set_keymap("v","<","<gv",{noremap = true, silent = true})
+vim.api.nvim_set_keymap("n",">",">gv",{noremap = true, silent = true})
+vim.api.nvim_set_keymap("n","<","<gv",{noremap = true, silent = true})
+
 vim.keymap.set("n", "<leader>af", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>s", vim.cmd.w)
 vim.keymap.set("n", "<leader>sq", vim.cmd.wq)
 vim.keymap.set("n", "<leader>f", function()
     vim.lsp.buf.format()
 end)
+
 vim.keymap.set('v', "Y", '"+yy')
 vim.keymap.set("n", "<leader>qa", vim.cmd.q)
 vim.api.nvim_set_keymap("n", "<leader>cmp", ":lua ColorMyPencils()<CR>", { noremap = true, silent = true })
@@ -23,17 +32,16 @@ vim.api.nvim_set_keymap("n", "<leader>cr", "<C-w>l<C-w>c", {noremap=true})
 vim.api.nvim_set_keymap("n", "<leader>cl", "<C-w>h<C-w>c", {noremap=true})
 
 -- switch between windows
-vim.api.nvim_set_keymap("n", "<leader>L", "<C-w>l", {noremap = true})
-vim.api.nvim_set_keymap("n", "<leader>H", "<C-w>h", {noremap = true})
-vim.api.nvim_set_keymap("n", "<leader>J", "<C-w>j", {noremap = true})
-vim.api.nvim_set_keymap("n", "<leader>K", "<C-w>k", {noremap = true})
+vim.keymap.set("n", "<c-k>", ":wincmd k<CR>")
+vim.keymap.set("n", "<c-j>", ":wincmd j<CR>")
+vim.keymap.set("n", "<c-h>", ":wincmd h<CR>")
+vim.keymap.set("n", "<c-l>", ":wincmd l<CR>")
 
 -- clear search params
 vim.api.nvim_set_keymap("n", "<leader>cs", ":noh<CR>", {noremap=true, silent=true})
 
 -- remap copilot accept to the control c key
 vim.api.nvim_set_keymap("i", "<C-c>", 'copilot#Accept("\\<CR>")', {expr = true,replace_keycodes = false })
-
 
 
 
