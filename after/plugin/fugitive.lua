@@ -4,7 +4,7 @@ vim.keymap.set("n", "<leader>gs", ":vertical Git<CR>:vertical resize 40<CR>", {n
 -- open up git difference
 vim.keymap.set("n", "<leader>gd", vim.cmd.Gdiff, {noremap = true, silent = true});
 -- opens a commit window
-vim.keymap.set("n", "<leader>gc",":vertical Git commit --quiet <CR>:vertical resize 40<CR>", {noremap = true, silent = true});
+vim.keymap.set("n", "<leader>gc",":Git commit --quiet <CR>:vertical resize 40<CR>", {noremap = true, silent = true});
 -- open up git difference comparing a branch
 vim.keymap.set("n", "<leader>gb", function()
     local input = vim.fn.input("Branch: ")
