@@ -31,7 +31,7 @@ return require('packer').startup(function(use)
     }
     use('christoomey/vim-tmux-navigator')
     use('cohama/lexima.vim')
-    use('nvim-treesitter/nvim-treesitter')
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
     use('xiyaowong/transparent.nvim')
