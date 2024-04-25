@@ -27,3 +27,10 @@ vim.o.smartcase = true
 
 -- Copilot no tab map
 vim.g.copilot_no_tab_map = true
+
+vim.cmd([[
+    " Set 2 space indentation for Terraform files
+    autocmd FileType terraform setlocal shiftwidth=2
+    autocmd FileType terraform setlocal softtabstop=2
+    autocmd FileType terraform setlocal expandtab
+]])
