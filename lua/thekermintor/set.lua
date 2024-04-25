@@ -27,13 +27,3 @@ vim.o.smartcase = true
 
 -- Copilot no tab map
 vim.g.copilot_no_tab_map = true
--- Changes a little of netrw
-vim.cmd([[
-  augroup NetrwHighlight
-    autocmd!
-    autocmd VimEnter * highlight NetrwDir guifg=#ebbcba
-    autocmd VimEnter * highlight netrwVersion guifg=#ebbcba
-    autocmd VimEnter * highlight netrwList guifg=#ebbcba
-  augroup END
-]])
-
