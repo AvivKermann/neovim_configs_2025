@@ -14,7 +14,7 @@ return {
         vim.cmd("highlight NetrwDir guifg=#ebbcba")
         vim.cmd("highlight netrwVersion guifg=#ebbcba")
         vim.cmd("highlight netrwList guifg=#ebbcba")
-        vim.cmd("highlight ColorColumn guibg=#286983")
+        vim.cmd("highlight ColorColumn guibg=#393552")
 	end
     },
 
