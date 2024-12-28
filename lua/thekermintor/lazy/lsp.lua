@@ -17,8 +17,11 @@ return {
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
 		"folke/lazydev.nvim",
+        "onsails/lspkind.nvim",
 	},
 	config = function()
+        local lspkind = require("lspkind")
+        lspkind.init()
 		local cmp = require("cmp")
 		local cmp_lsp = require("cmp_nvim_lsp")
 		local capabilities = vim.tbl_deep_extend(
@@ -42,6 +45,17 @@ return {
 		})
 		local cmp_select = { behavior = cmp.SelectBehavior.Select }
 		cmp.setup({
+            formatting = {
+                format = lspkind.cmp_format({
+                    mode = "symbol",
+                    maxwidth = {
+                        menu = 50,
+                        abbr = 50,
+                    },
+
+                }),
+            },
+
 			snippet = {
 				expand = function(args)
 					require("luasnip").lsp_expand(args.body) -- For `luasnip` users.
