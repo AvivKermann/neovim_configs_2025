@@ -9,7 +9,14 @@ return {
     {
 	"rose-pine/neovim",
 	config = function()
-        require("rose-pine").setup({})
+        require("rose-pine").setup({
+            extend_background_behind_borders = false,
+            styles = {
+                bold = false,
+                italic = false,
+                transparency = false,
+            }
+        })
         ColorMyPencils()
         vim.cmd("highlight NetrwDir guifg=#ebbcba")
         vim.cmd("highlight netrwVersion guifg=#ebbcba")
