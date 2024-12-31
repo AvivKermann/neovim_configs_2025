@@ -12,6 +12,7 @@ return {
         ['<C-k>'] = { 'select_prev', 'fallback' },
     },
     completion = {
+        accept = { auto_brackets = { enabled = true } },
         menu = {
             draw = {
                 components = {
