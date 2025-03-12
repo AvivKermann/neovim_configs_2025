@@ -2,6 +2,7 @@
 local lsp_servers = {
 	"pyright",
 	"lua_ls",
+    "lemminx"
 }
 return {
 	"neovim/nvim-lspconfig",
