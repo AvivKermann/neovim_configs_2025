@@ -11,7 +11,6 @@ return {
                 background_colour = "#000000",
             })
             vim.notify = notify
-            -- so the notification colors will be the same as rose pine
         end
     }
 }
