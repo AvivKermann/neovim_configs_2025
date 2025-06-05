@@ -14,7 +14,6 @@ return {
         "rafamadriz/friendly-snippets",
         "folke/lazydev.nvim",
         "saghen/blink.cmp",
-        "jose-elias-alvarez/null-ls.nvim",
     },
     config = function()
         local capabilities = require("blink.cmp").get_lsp_capabilities()
@@ -31,22 +30,11 @@ return {
             },
         })
 
-        --- Setup autocmd to format on save.
         vim.api.nvim_create_autocmd("BufWritePre", {
             pattern = { "*.py", "*.lua" },
             callback = function()
                 vim.lsp.buf.format({ async = true })
             end,
-        })
-        --- Setup formatters for different languages.
-        local null_ls = require("null-ls")
-        null_ls.setup({
-            sources = {
-                null_ls.builtins.formatting.black.with({
-                    extra_args = { "--fast" },
-                }),
-                null_ls.builtins.formatting.stylua,
-            },
         })
 
         require("luasnip.loaders.from_vscode").lazy_load()

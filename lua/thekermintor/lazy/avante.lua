@@ -6,6 +6,7 @@ return {
         provider = "copilot",
         mappings = {
             focus = "<leader>as",
+            clear = "<leader>ac",
         },
     },
     build = "make",
